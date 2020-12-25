@@ -21,7 +21,7 @@ Then, a combined effort between some community members and I managed to box and 
 
 After collecting the necessary data, I trained a [YoloV4](https://arxiv.org/pdf/2004.10934.pdf) model on the data locally for several hours until the loss curve flattened. For this type of model, the general rule of thumb is the lower the loss the tighter the predicted bounding box. 
 
-![](../images/yolo/YoloTrainingLoss.png)
+![](../images/foxes/yolo/YoloTrainingLoss.png)
 
 ## Evaluation
 
