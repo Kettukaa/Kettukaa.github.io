@@ -11,7 +11,7 @@ In order to generate high fidelity and detailed images using [DDPM](https://arxi
 
 ## Collecting Data
 
-Training a [Yolo]() object detection model requires a decent sized collection of images containing human-defined bounding boxes with labels. TO create this dataset, I used [Shawn Presser's](https://github.com/shawwn) annotation website [tagpls](https://www.tagpls.com/) and requested a section for a portion of the foxes I've collected. 
+Training a [Yolo](https://arxiv.org/abs/1506.02640) object detection model requires a decent sized collection of images containing human-defined bounding boxes with labels. TO create this dataset, I used [Shawn Presser's](https://github.com/shawwn) annotation website [tagpls](https://www.tagpls.com/) and requested a section for a portion of the foxes I've collected. 
 
 Then, a combined effort between some community members and I managed to box and tag several features of 2000+ foxes. 
 
