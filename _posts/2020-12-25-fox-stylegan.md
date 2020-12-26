@@ -34,6 +34,29 @@ Below are nine completely SG2-ADA generated images, these foxes do not exist:
 ![](../images/foxes/SG2ADA/samples-grid1.png)
 
 ## StyleGAN features
-SG comes packaged with a lot of interesting features that deserve a post all on their own (coming soon). In simple terms, SG encodes all possible output images in a representation called "Latent Space." This latent space is simply a 512 dimensional space. When inferencing the model, you seed a random number to a script and the script converts that random number to a random point in this 512 dimensional space. The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between theme creates a smooth transition between images:
+SG comes packaged with a lot of interesting features that deserve a post all on their own (coming soon). In simple terms, SG encodes all possible output images in a representation called "Latent Space." This latent space is simply a 512 dimensional space. When inferencing the model, you seed a random number to a script and the script converts that random number to a random point in this 512 dimensional space. This seemingly simple concept has many very cool use cases:
+
+
+#### Linear Interpolation
+##### Smoothly Transitioning Between Foxes
+The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between them creates a smooth transition between images:
 
 [![Interpolation Video](../images/foxes/SG2ADA/VideoThumbnail.png)](https://youtu.be/P-rnhQP-4yE)
+
+This is possible through [Derrick Schultz' stylegan2-ada repository](https://github.com/dvschultz/stylegan2-ada)
+
+#### Principal Component Analysis
+##### Latent Vector Discovery
+
+Principal Component Analysis, or PCA, is a technique in which data is analyzed and "principal components" of the data are found. These principal components are, in a basic sense, lines that best fit the data. Many best fit lines are computed, and the ones that best fit the data are typically listed first. 
+
+![Principal Component Image](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/GaussianScatterPCA.svg/1200px-GaussianScatterPCA.svg.png)
+
+The importance of PCA in GANs is to find "Latent Directions" of the model. These latent directions are important in adjusting the output of the image. While training the model, certain "traits" are nicely encoded into the latent space. PCA can find components that encode for the "most important traits" of the model. For instance, suppose for a moment the fox model had only two dimensions in latent space for simplicity, then lets pretend that I ran PCA over the model and found a latent direction of 
+```python
+[1/sqrt(2),1/sqrt(2)] # AKA, a vector pointing up and to the right. 
+```
+After adjusting a random point in latent space, I find that this latent direction encodes for "head rotation." That means shifting the point in latent space in the direction of this component can be used to rotate the original head. 
+
+This example can be seen here:
+[![PCA Example](../images/foxes/SG2ADA/PCAVidoThumbnail.png)](https://youtu.be/APZnxVJ2wWY)
