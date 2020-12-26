@@ -22,6 +22,8 @@ For both SG2 and SG2-ADA, I used an existing github repository to train the mode
 #### TPU and GPU
 The primary difference between how I trained the two models was that SG2 had a repo for utilizing a [Cloud TPU](https://cloud.google.com/tpu) (Tensor Processing Unit), a very powerful computer made specifically with neural networks in mind. Utilizing a TPU allows for fast training and model inference, the only issue is acquiring a TPU. Luckily, [TensorFlow](https://www.tensorflow.org/), the company behind the popular neural network framework of the same name, has a service available called TensorFlow Research Cloud ([TFRC](https://www.tensorflow.org/tfrc)) which allows researchers to apply and use one of Google's TPU V3-8's for no cost, aside from general Google Cloud Platform ([GCP](https://cloud.google.com/)) fees. Luckily, Google offers any new GCP account with $300 in cloud credits, which quickly offset any costs for GCP for a few months.   
 
+SG2's TPU release can be found [here](https://github.com/shawwn/stylegan2/tree/tpu) by Shawn Presser. 
+
 Unfortunately, as of writing, SG2-ADA has not seen a TPU release just yet, so I had to train the SG2-ADA model using a GPU. Luckily, Google's generous hands help me out again by providing a powerful GPU through [Google Colab](https://colab.research.google.com/)
 
 #### Transfer Learning
@@ -60,3 +62,8 @@ After adjusting a random point in latent space, I find that this latent directio
 
 This example can be seen here:
 [![PCA Example](../images/foxes/SG2ADA/PCAVidoThumbnail.png)](https://youtu.be/APZnxVJ2wWY)
+
+Another neat examples, The Age Component:
+![Age Component](../images/foxes/SG2ADA/PCAAge.png)
+
+All of this is possible through [the GANSpace paper](https://arxiv.org/abs/2004.02546) and [Erik Härkönen's GANSpace Notebook](https://colab.research.google.com/github/harskish/ganspace/blob/master/notebooks/Ganspace_colab.ipynb)
