@@ -13,18 +13,18 @@ Data preparation mainly consisted of gathering data, automatically locating fox 
 
 ## StyleGAN2 vs. StyleGAN2-ADA
 One problem with SG2 that SG2-ADA attempts to solve is enabling training on smaller datasets. NVLab's solution to this problem is, what they call, "Adaptive Discriminator Augmentation" or ADA. ADA in addition to the new Augmentation Pipeline allows me to generate higher quality foxes than what was possible in SG2 given the same dataset. The reason I include both SG2 and SG2-ADA is because I had started this project before SG2-ADA existed. So I felt the need to document both models. More information on SG2 vs. SG2-ADA can be found in their respective papers:
- - https://arxiv.org/abs/1912.04958
- - https://arxiv.org/abs/2006.06676
+ - [https://arxiv.org/abs/1912.04958](https://arxiv.org/abs/1912.04958)
+ - [https://arxiv.org/abs/2006.06676](https://arxiv.org/abs/2006.06676)
 
 ## Training Methods
 For both SG2 and SG2-ADA, I used an existing github repository to train the models.
 
-### TPU and GPU
+#### TPU and GPU
 The primary difference between how I trained the two models was that SG2 had a repo for utilizing a [Cloud TPU](https://cloud.google.com/tpu) (Tensor Processing Unit), a very powerful computer made specifically with neural networks in mind. Utilizing a TPU allows for fast training and model inference, the only issue is acquiring a TPU. Luckily, [TensorFlow](https://www.tensorflow.org/), the company behind the popular neural network framework of the same name, has a service available called TensorFlow Research Cloud ([TFRC](https://www.tensorflow.org/tfrc)) which allows researchers to apply and use one of Google's TPU V3-8's for no cost, aside from general Google Cloud Platform ([GCP](https://cloud.google.com/)) fees. Luckily, Google offers any new GCP account with $300 in cloud credits, which quickly offset any costs for GCP for a few months.   
 
 Unfortunately, as of writing, SG2-ADA has not seen a TPU release just yet, so I had to train the SG2-ADA model using a GPU. Luckily, Google's generous hands help me out again by providing a powerful GPU through [Google Colab](https://colab.research.google.com/)
 
-### Transfer Learning
+#### Transfer Learning
 In both methods, the basic process of training the model is pointing the corresponding training script towards a dataset, and, to reduce the training time, a "pretrained model" where my new model can train from. The process of starting training with an existing similar model is called "Transfer Learning." For the SG2-ADA run, I opted to transfer from Nvidia's [AFHQ Wild pretrained model](https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada/pretrained/)
 
 ## Results
@@ -34,3 +34,6 @@ Below are nine completely SG2-ADA generated images, these foxes do not exist:
 ![](../images/foxes/SG2ADA/samples-grid1.png)
 
 ## StyleGAN features
+SG comes packaged with a lot of interesting features that deserve a post all on their own (coming soon). In simple terms, SG encodes all possible output images in a representation called "Latent Space." This latent space is simply a 512 dimensional space. When inferencing the model, you seed a random number to a script and the script converts that random number to a random point in this 512 dimensional space. The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between theme creates a smooth transition between images:
+
+[![Interpolation Video](../images/foxes/SG2ADA/VideoThumbnail.png)](https://youtu.be/P-rnhQP-4yE)
