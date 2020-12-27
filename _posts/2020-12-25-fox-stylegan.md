@@ -42,8 +42,9 @@ Below are nine completely SG2-ADA generated images, these foxes do not exist:
 ## StyleGAN features
 SG comes packaged with a lot of interesting features that deserve a post all on their own (coming soon). In simple terms, SG encodes all possible output images in a representation called "Latent Space." This latent space is simply a 512 dimensional space. When inferencing the model, you seed a random number to a script and the script converts that random number to a random point in this 512 dimensional space. This seemingly simple concept has many very cool use cases:
 
-#### Truncatation PSI
+#### Truncation PSI
 Truncation is a parameter that controls the amount of variation in the output space. A PSI close to 0 will have little to no variation, whereas >1.0 might be too varied to even have a recognizable fox. 
+
 | Truncation PSI | Random Samples                                    |
 | -------------- | ------------------------------------------------- |
 | 0.1            | ![](../images/foxes/SG2ADA/Samples-Trunc-0.1.png) |
@@ -51,7 +52,7 @@ Truncation is a parameter that controls the amount of variation in the output sp
 | 0.5            | ![](../images/foxes/SG2ADA/Samples-Trunc-0.5.png) |
 | 0.7            | ![](../images/foxes/SG2ADA/Samples-Trunc-0.7.png) |
 | 1.0            | ![](../images/foxes/SG2ADA/Samples-Trunc-1.0.png) |
-| 1.5            | ![](../images/foxes/sg2ada/Samples-Trunc-1.5.png) |
+| 1.5            | ![](../images/foxes/SG2ADA/Samples-Trunc-1.5.png) |
 
 
 
