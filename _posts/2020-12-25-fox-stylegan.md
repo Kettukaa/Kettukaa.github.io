@@ -68,7 +68,7 @@ $$
 After adjusting a random point in latent space by shifting the point in the direction of this vector, I find that this hypothetical latent direction encodes for "head rotation." That means shifting the point in latent space in the direction of this component can be used to rotate the original head. 
 
 The real life example of this can be seen here:
-<iframe src="https://www.youtube.com/embed/APZnxVJ2wWY"width="100%" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="500rem"></iframe>
+<iframe src="https://www.youtube.com/embed/APZnxVJ2wWY" width="100%" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="500rem"></iframe>
 
 Another neat example, The Age Component:
 ![Age Component](../images/foxes/SG2ADA/PCAAge.png)
