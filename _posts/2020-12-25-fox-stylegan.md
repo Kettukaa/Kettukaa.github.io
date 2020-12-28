@@ -42,16 +42,14 @@ Below are nine completely SG2-ADA generated images, these foxes do not exist:
 ## StyleGAN features
 SG comes packaged with a lot of interesting features that deserve a post all on their own (coming soon). In simple terms, SG encodes all possible output images in a representation called "Latent Space." This latent space is simply a 512 dimensional space. When inferencing the model, you seed a random number to a script and the script converts that random number to a random point in this 512 dimensional space. This seemingly simple concept has many very cool use cases:
 
-#### Linear Interpolation
-##### Smoothly Transitioning Between Foxes
+#### Linear Interpolation — Smoothly Transitioning Between Foxes
 The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between them creates a smooth transition between images:
 
 <iframe width="1000" height="1000" src="https://www.youtube.com/embed/P-rnhQP-4yE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This is possible through Derrick Schultz' [StyleGAN2-ADA repository](https://github.com/dvschultz/stylegan2-ada)
 
-#### Principal Component Analysis
-##### Latent Vector Discovery
+#### Principal Component Analysis — Latent Vector Discovery
 
 Principal Component Analysis, or PCA, is a technique in which data is analyzed and "principal components" of the data are found. These principal components are, in a basic sense, lines that best fit the data. Many best fit lines are computed, and the ones that best fit the data are typically listed first. 
 
