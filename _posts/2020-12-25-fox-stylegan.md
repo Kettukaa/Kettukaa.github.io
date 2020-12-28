@@ -47,12 +47,12 @@ Truncation is a parameter that controls the amount of variation in the output sp
 
 | Truncation PSI | Random Samples                                    |
 | -------------- | ------------------------------------------------- |
-| $0.1$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.1.png) |
-| $0.3$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.3.png) |
-| $0.5$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.5.png) |
-| $0.7$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.7.png) |
-| $1.0$          | ![](../images/foxes/SG2ADA/Samples-Trunc-1.0.png) |
-| $1.5$          | ![](../images/foxes/SG2ADA/Samples-Trunc-1.5.png) |
+| $$0.1$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.1.png) |
+| $$0.3$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.3.png) |
+| $$0.5$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.5.png) |
+| $$0.7$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.7.png) |
+| $$1.0$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-1.0.png) |
+| $$1.5$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-1.5.png) |
 
 
 
