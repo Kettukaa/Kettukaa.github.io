@@ -45,7 +45,7 @@ SG comes packaged with a lot of interesting features that deserve a post all on 
 #### Linear Interpolation — Smoothly Transitioning Between Foxes
 The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between them creates a smooth transition between images:
 
-<iframe src="https://www.youtube.com/embed/P-rnhQP-4yE" width="100%" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="500rem"></iframe>
+<iframe src="https://www.youtube.com/embed/P-rnhQP-4yE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style='width:100%; height:50vh;'></iframe>
 
 This is possible through Derrick Schultz' [StyleGAN2-ADA repository](https://github.com/dvschultz/stylegan2-ada)
 
@@ -68,7 +68,7 @@ $$
 After adjusting a random point in latent space by shifting the point in the direction of this vector, I find that this hypothetical latent direction encodes for "head rotation." That means shifting the point in latent space in the direction of this component can be used to rotate the original head. 
 
 The real life example of this can be seen here:
-<iframe src="https://www.youtube.com/embed/APZnxVJ2wWY" width="100%" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="500rem"></iframe>
+<iframe style='width:100%; height:50vh;' src="https://www.youtube.com/embed/APZnxVJ2wWY" width="100%" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="500rem"></iframe>
 
 Another neat example, The Age Component:
 ![Age Component](../images/foxes/SG2ADA/PCAAge.png)
