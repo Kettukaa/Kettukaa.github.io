@@ -47,12 +47,12 @@ Truncation is a parameter that controls the amount of variation in the output sp
 
 | Truncation PSI | Random Samples                                    |
 | -------------- | ------------------------------------------------- |
-| 0.1            | ![](../images/foxes/SG2ADA/Samples-Trunc-0.1.png) |
-| 0.3            | ![](../images/foxes/SG2ADA/Samples-Trunc-0.3.png) |
-| 0.5            | ![](../images/foxes/SG2ADA/Samples-Trunc-0.5.png) |
-| 0.7            | ![](../images/foxes/SG2ADA/Samples-Trunc-0.7.png) |
-| 1.0            | ![](../images/foxes/SG2ADA/Samples-Trunc-1.0.png) |
-| 1.5            | ![](../images/foxes/SG2ADA/Samples-Trunc-1.5.png) |
+| $0.1$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.1.png) |
+| $0.3$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.3.png) |
+| $0.5$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.5.png) |
+| $0.7$          | ![](../images/foxes/SG2ADA/Samples-Trunc-0.7.png) |
+| $1.0$          | ![](../images/foxes/SG2ADA/Samples-Trunc-1.0.png) |
+| $1.5$          | ![](../images/foxes/SG2ADA/Samples-Trunc-1.5.png) |
 
 
 
@@ -61,6 +61,7 @@ Truncation is a parameter that controls the amount of variation in the output sp
 The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between them creates a smooth transition between images:
 
 [![Interpolation Video](../images/foxes/SG2ADA/VideoThumbnail.png)](https://youtu.be/P-rnhQP-4yE)
+<iframe width="777" height="437" src="https://www.youtube.com/embed/P-rnhQP-4yE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This is possible through Derrick Schultz' [StyleGAN2-ADA repository](https://github.com/dvschultz/stylegan2-ada)
 
@@ -76,8 +77,8 @@ The importance of PCA in GANs is to find "Latent Directions" of the model. These
 $$
 \vec{v} =
 \begin{bmatrix}
-\frac{1}{\sqrt{2}} \\
-\frac{1}{\sqrt{2}}
+\frac{\sqrt{2}}{2} \\
+\frac{\sqrt{2}}{2}
 \end{bmatrix}
 $$
 
@@ -85,12 +86,9 @@ After adjusting a random point in latent space by shifting the point in the dire
 
 The real life example of this can be seen here:
 [![PCA Example](../images/foxes/SG2ADA/PCAVidoThumbnail.png)](https://youtu.be/APZnxVJ2wWY)
+<iframe width="777" height="437" src="https://www.youtube.com/embed/APZnxVJ2wWY" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Another neat example, The Age Component:
 ![Age Component](../images/foxes/SG2ADA/PCAAge.png)
 
-All of this is possible through [the GANSpace paper](https://arxiv.org/abs/2004.02546) and Erik Härkönen's [GANSpace Notebook](https://colab.research.google.com/github/harskish/ganspace/blob/master/notebooks/Ganspace_colab.ipynb)
-
-
-
-`
+All of this PCA work is possible through [the GANSpace paper](https://arxiv.org/abs/2004.02546) and Erik Härkönen's [GANSpace Notebook](https://colab.research.google.com/github/harskish/ganspace/blob/master/notebooks/Ganspace_colab.ipynb)
