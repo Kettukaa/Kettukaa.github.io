@@ -42,20 +42,6 @@ Below are nine completely SG2-ADA generated images, these foxes do not exist:
 ## StyleGAN features
 SG comes packaged with a lot of interesting features that deserve a post all on their own (coming soon). In simple terms, SG encodes all possible output images in a representation called "Latent Space." This latent space is simply a 512 dimensional space. When inferencing the model, you seed a random number to a script and the script converts that random number to a random point in this 512 dimensional space. This seemingly simple concept has many very cool use cases:
 
-#### Truncation PSI
-Truncation is a parameter that controls the amount of variation in the output space. A PSI close to 0 will have little to no variation, whereas >1.0 might be too varied to even have a recognizable fox. 
-
-| Truncation PSI | Random Samples                                    |
-| -------------- | ------------------------------------------------- |
-| $$0.1$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.1.png) |
-| $$0.3$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.3.png) |
-| $$0.5$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.5.png) |
-| $$0.7$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.7.png) |
-| $$1.0$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-1.0.png) |
-| $$1.5$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-1.5.png) |
-
-
-
 #### Linear Interpolation
 ##### Smoothly Transitioning Between Foxes
 The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between them creates a smooth transition between images:
@@ -90,3 +76,16 @@ Another neat example, The Age Component:
 ![Age Component](../images/foxes/SG2ADA/PCAAge.png)
 
 All of this PCA work is possible through [the GANSpace paper](https://arxiv.org/abs/2004.02546) and Erik Härkönen's [GANSpace Notebook](https://colab.research.google.com/github/harskish/ganspace/blob/master/notebooks/Ganspace_colab.ipynb)
+
+#### Truncation PSI
+Truncation is a parameter that controls the amount of variation in the output space. A PSI close to 0 will have little to no variation, whereas >1.0 might be too varied to even have a recognizable fox. 
+
+| Truncation PSI | Random Samples                                    |
+| -------------- | ------------------------------------------------- |
+| $$0.1$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.1.png) |
+| $$0.3$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.3.png) |
+| $$0.5$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.5.png) |
+| $$0.7$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-0.7.png) |
+| $$1.0$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-1.0.png) |
+| $$1.5$$        | ![](../images/foxes/SG2ADA/Samples-Trunc-1.5.png) |
+
