@@ -2,7 +2,7 @@
 layout: post
 title: Fox Detection
 categories: [Fox, ML]
-excerpt: In order to generate high fidelity and detailed images using [DDPM](https://arxiv.org/abs/2006.11239) and [StyleGAN2-ADA](https://arxiv.org/abs/2006.06676), I needed to create a dataset of foxes that were cropped consistently, as the technology, as of writing, is not there yet to produce full images of foxes. Because of the current limitations I needed to . . . 
+excerpt: In order to generate high fidelity and detailed images using DDPM and StyleGAN2-ADA, I needed to create a dataset of foxes that were cropped consistently, as the technology, as of writing, is not there yet to produce full images of foxes. Because of the current limitations I needed to . . . 
 ---
 
 In order to generate high fidelity and detailed images using [DDPM](https://arxiv.org/abs/2006.11239) and [StyleGAN2-ADA](https://arxiv.org/abs/2006.06676), I needed to create a dataset of foxes that were cropped consistently, as the technology, as of writing, is not there yet to produce full images of foxes. Because of the current limitations, I needed to create a dataset of cropped fox heads. The method I decided to utilize was [Yolo object detection.](https://arxiv.org/abs/1506.02640) 

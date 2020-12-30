@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Utilizing StyleGAN2 and StyleGAN2-ADA to Generate Photorealistic Foxes
-excerpt: Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's [StyleGAN2](https://github.com/NVlabs/stylegan2) (SG2) and [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada) (SG2-ADA) generative GAN models can be easily used to generate a . . .
+excerpt: Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's StyleGAN2 and StyleGAN2-ADA generative GAN models can be easily used to generate a . . .
 categories: [foxes, ML, StyleGAN]
 ---
 
