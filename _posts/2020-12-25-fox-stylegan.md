@@ -48,7 +48,7 @@ The script then passes this point through StyleGAN's generator to produce an ima
 
 
 <div style='width:100%; position:relative; padding:0; padding-top:100%'>
-  <iframe style='position:absolute; top:0; left:0; width:100%; height:100%;' src="https://www.youtube.com/embed/P-rnhQP-4yE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe style='position:absolute; top:0; left:0; width:100%; height:100%;' src="https://www.youtube.com/embed/P-rnhQP-4yE?playlist=P-rnhQP-4yE&loop=1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 This is possible through Derrick Schultz' [StyleGAN2-ADA repository](https://github.com/dvschultz/stylegan2-ada)
@@ -75,7 +75,7 @@ The real life example of this can be seen here:
 
 
 <div style='width:100%; position:relative; padding:0; padding-top:100%'>
-  <iframe style='position:absolute; top:0; left:0; width:100%; height:100%;' src="https://www.youtube.com/embed/APZnxVJ2wWY" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe style='position:absolute; top:0; left:0; width:100%; height:100%;' src="https://www.youtube.com/embed/APZnxVJ2wWY?playlist=APZnxVJ2wWY&loop=1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 
