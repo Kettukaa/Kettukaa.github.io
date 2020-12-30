@@ -1,17 +1,18 @@
 ---
 layout: post
 title: Utilizing StyleGAN2 and StyleGAN2-ADA to Generate Photorealistic Foxes
-categories: [foxes, ML]
+excerpt: Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's [StyleGAN2](https://github.com/NVlabs/stylegan2) (SG2) and [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada) (SG2-ADA) generative GAN models can be easily used to generate a . . .
+categories: [foxes, ML, StyleGAN]
 ---
 
-Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's [StyleGAN2]() (SG2) and [StyleGAN2-ADA]() (SG2-ADA) generative GAN models can be easily used to generate a wide range of images if provided a large enough well-created dataset. 
+Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's [StyleGAN2](https://github.com/NVlabs/stylegan2) (SG2) and [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada) (SG2-ADA) generative GAN models can be easily used to generate a wide range of images if provided a large enough well-created dataset. 
 
 ![](../images/foxes/SG2ADA/samples.png)
 
 ## Preparation
 Data preparation mainly consisted of gathering data, automatically locating fox heads, and cropping the heads into squares. To locate and crop the heads automatically, I used a YoloV4 model (which I talk about in more detail [here](https://kettukaa.github.io/fox-detection/)) to find the heads, and a script to crop the images. 
 
-![Cropping a fox head](../images/foxes/yolo/FoxZoom.png)
+![Cropping a fox head](../images/foxes/yolo/GoodExample5.png)
 
 ## StyleGAN2 vs. StyleGAN2-ADA
 One problem with SG2 that SG2-ADA attempts to solve is enabling training on smaller datasets. NVLab's solution to this problem is, what they call, "Adaptive Discriminator Augmentation" or ADA. ADA in addition to the new Augmentation Pipeline allows me to generate higher quality foxes than what was possible in SG2 given the same dataset. The reason I include both SG2 and SG2-ADA is because I had started this project before SG2-ADA existed. So I felt the need to document both models. More information on SG2 vs. SG2-ADA can be found in their respective papers:
@@ -45,8 +46,11 @@ SG comes packaged with a lot of interesting features that deserve a post all on 
 #### Linear Interpolation — Smoothly Transitioning Between Foxes
 The script then passes this point through StyleGAN's generator to produce an image. A neat byproduct of this encoding is that points close a point in latent space are similar to the original point. So, taking two random points in latent space and _linearly interpolating_ between them creates a smooth transition between images:
 
+<div class="wrapper-with-intrinsic-ratio">
+  <div class="element-to-stretch">
 <iframe src="https://www.youtube.com/embed/P-rnhQP-4yE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style='width:100%; height:50vh;'></iframe>
-
+</div>
+</div>
 This is possible through Derrick Schultz' [StyleGAN2-ADA repository](https://github.com/dvschultz/stylegan2-ada)
 
 #### Principal Component Analysis — Latent Vector Discovery
@@ -68,7 +72,12 @@ $$
 After adjusting a random point in latent space by shifting the point in the direction of this vector, I find that this hypothetical latent direction encodes for "head rotation." That means shifting the point in latent space in the direction of this component can be used to rotate the original head. 
 
 The real life example of this can be seen here:
-<iframe style='width:100%; height:50vh;' src="https://www.youtube.com/embed/APZnxVJ2wWY" width="100%" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="500rem"></iframe>
+
+<div class="wrapper-with-intrinsic-ratio">
+  <div class="element-to-stretch">
+<iframe src="https://www.youtube.com/embed/APZnxVJ2wWY"frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
 
 Another neat example, The Age Component:
 ![Age Component](../images/foxes/SG2ADA/PCAAge.png)
