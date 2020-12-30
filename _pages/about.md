@@ -4,26 +4,14 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+## Purpose The Site
+The goal of this website is to document, organize, and present my work with machine learning. That work includes training models of the type Object-Detection, GANs, and DDPMs, with more to come.   
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+## Where Can You Get The Code
+At the time of writing, nowhere yet. But I will be releasing my code on [my github page](https://github.com/Kettukaa) in the near future. 95% of my code are Jupyter Notebooks utilizing the [Google Colab](https://colab.research.google.com/) environment.
 
-## Features
+## Why "Kettukaa"?
+I wanted a pseudonym that had meaning that was closely linked to the primary subject of my work, foxes. So I went on Google Translate and cycled through the languages until I landed on the Finnish "Kettu." I wanted a little extra so I added the ending "kaa" for flair. 
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+
