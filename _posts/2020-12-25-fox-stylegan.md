@@ -7,7 +7,7 @@ categories: [foxes, ML, StyleGAN]
 
 Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's [StyleGAN2](https://github.com/NVlabs/stylegan2) (SG2) and [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada) (SG2-ADA) generative models can be easily used to generate a wide range of images if provided a large enough well-created dataset. 
 
-![](../images/foxes/SG2ADA/samples.png)
+{% include image.html url="/images/foxes/SG2ADA/samples.png" description="Generated samples from my model." %}
 
 ## Preparation
 Data preparation mainly consisted of gathering data, automatically locating fox heads, and cropping the heads into squares. To locate and crop the heads automatically, I used a YoloV4 model (which I talk about in more detail [here](https://kettukaa.github.io/fox-detection/)) to find the heads, and a script to crop the images. 
@@ -79,8 +79,8 @@ The real life example of this can be seen here:
 </div>
 
 
-Another neat example, The Age Component:
-![Age Component](../images/foxes/SG2ADA/PCAAge.png)
+
+{% include image.html url="/images/foxes/SG2ADA/PCAAge.png" description="Another neat example of a found vector: The Cub Component" %}
 
 All of this PCA work is possible through [the GANSpace paper](https://arxiv.org/abs/2004.02546) and Erik Härkönen's [GANSpace Notebook](https://colab.research.google.com/github/harskish/ganspace/blob/master/notebooks/Ganspace_colab.ipynb)
 
