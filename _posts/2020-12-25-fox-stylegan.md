@@ -23,7 +23,7 @@ One problem with SG2 that SG2-ADA attempts to solve is enabling training on smal
 For both SG2 and SG2-ADA, I used an existing github repository to train the models.
 
 #### TPU and GPU
-![Google TPU](../images/foxes/SG2ADA/TPU.png)
+{% include image.html url="/images/foxes/SG2ADA/TPU.png" description="Google Cloud TPU Pod" %}
 
 The primary difference between how I trained the two models was that SG2 had a repo for utilizing a [Cloud TPU](https://cloud.google.com/tpu) (Tensor Processing Unit), a very powerful computer made specifically with neural networks in mind. Utilizing a TPU allows for fast training and model inference, the only issue is acquiring a TPU. Luckily, [TensorFlow](https://www.tensorflow.org/), the company behind the popular neural network framework of the same name, has a service available called TensorFlow Research Cloud ([TFRC](https://www.tensorflow.org/tfrc)) which allows researchers to apply and use one of Google's TPU V3-8's for no cost, aside from general Google Cloud Platform ([GCP](https://cloud.google.com/)) fees. Luckily, Google offers any new GCP account with $300 in cloud credits, which quickly offset any costs for GCP for a few months.   
 
@@ -77,8 +77,6 @@ The real life example of this can be seen here:
 <div style='width:100%; position:relative; padding:0; padding-top:100%'>
   <iframe style='position:absolute; top:0; left:0; width:100%; height:100%;' src="https://www.youtube.com/embed/APZnxVJ2wWY?playlist=APZnxVJ2wWY&loop=1" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-
 
 {% include image.html url="/images/foxes/SG2ADA/PCAAge.png" description="Another neat example of a found vector: The Cub Component" %}
 
