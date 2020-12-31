@@ -13,5 +13,5 @@ At the time of writing, nowhere yet. But I will be releasing my code on [my gith
 ## Why "Kettukaa"?
 I wanted a pseudonym that had meaning that was closely linked to the primary subject of my work, foxes. So I went on Google Translate and cycled through the languages until I landed on the Finnish "Kettu." I wanted a little extra so I added the ending "kaa" for flair. 
 
-
-
+## Webpage
+This website was created through [Github Pages](https://pages.github.com/) using the [Reverie](https://github.com/amitmerchant1990/reverie) template. I have to give it to Github, their system with Jekyll and hosting sites works straight out of the box and is easily adaptable. 10/10. 
