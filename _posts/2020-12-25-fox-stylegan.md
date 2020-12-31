@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Utilizing StyleGAN2 and StyleGAN2-ADA to Generate Photorealistic Foxes
-excerpt: Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's StyleGAN2 and StyleGAN2-ADA generative GAN models can be easily used to generate a . . .
+excerpt: Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's StyleGAN2 and StyleGAN2-ADA generative models can be easily used to generate a . . .
 categories: [foxes, ML, StyleGAN]
 ---
 
-Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's [StyleGAN2](https://github.com/NVlabs/stylegan2) (SG2) and [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada) (SG2-ADA) generative GAN models can be easily used to generate a wide range of images if provided a large enough well-created dataset. 
+Generating high fidelity images through the power of machine learning has become increasingly trivial and accessible to the average person. NVLab's [StyleGAN2](https://github.com/NVlabs/stylegan2) (SG2) and [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada) (SG2-ADA) generative models can be easily used to generate a wide range of images if provided a large enough well-created dataset. 
 
 ![](../images/foxes/SG2ADA/samples.png)
 
@@ -85,7 +85,7 @@ Another neat example, The Age Component:
 All of this PCA work is possible through [the GANSpace paper](https://arxiv.org/abs/2004.02546) and Erik Härkönen's [GANSpace Notebook](https://colab.research.google.com/github/harskish/ganspace/blob/master/notebooks/Ganspace_colab.ipynb)
 
 #### Truncation PSI
-Truncation is a parameter that controls the amount of variation in the output space. A PSI close to 0 will have little to no variation, whereas >1.0 might be too varied to even have a recognizable fox. 
+Truncation is a parameter that controls the amount of variation in the output space. A PSI close to 0 will have little to no variation, whereas >1.0 might be too varied to even have a recognizable fox. I found that features like non-red foxes and open mouths do not start to show up frequently until truncation PSI > 0.7 
 
 | Truncation PSI | Random Samples                                    |
 | -------------- | ------------------------------------------------- |
