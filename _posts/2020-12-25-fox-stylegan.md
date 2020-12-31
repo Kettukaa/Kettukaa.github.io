@@ -12,8 +12,7 @@ Generating high fidelity images through the power of machine learning has become
 ## Preparation
 Data preparation mainly consisted of gathering data, automatically locating fox heads, and cropping the heads into squares. To locate and crop the heads automatically, I used a YoloV4 model (which I talk about in more detail [here](https://kettukaa.github.io/fox-detection/)) to find the heads, and a script to crop the images. 
 
-![Cropping a fox head](../images/foxes/yolo/GoodExample5.png)
-
+{% include image.html url="/images/foxes/yolo/GoodExample5.png" description="Cropping a random image of a fox using my YoloV4 trained model." %}
 ## StyleGAN2 vs. StyleGAN2-ADA
 One problem with SG2 that SG2-ADA attempts to solve is enabling training on smaller datasets. NVLab's solution to this problem is, what they call, "Adaptive Discriminator Augmentation" or ADA. ADA in addition to the new Augmentation Pipeline allows me to generate higher quality foxes than what was possible in SG2 given the same dataset. The reason I include both SG2 and SG2-ADA is because I had started this project before SG2-ADA existed. So I felt the need to document both models. More information on SG2 vs. SG2-ADA can be found in their respective papers:
  - [https://arxiv.org/abs/1912.04958](https://arxiv.org/abs/1912.04958)
@@ -38,7 +37,7 @@ In both methods, the basic process of training the model is pointing the corresp
 The results are astounding. The quality of the images generated is so good, that very often you couldn't tell a fake generated fox from reals. 
 
 Below are nine completely SG2-ADA generated images, these foxes do not exist:
-![](../images/foxes/SG2ADA/samples-grid1.png)
+{% include image.html url="/images/foxes/SG2ADA/samples-grid1.png" description="Samples from my SG2-ADA model with various levels of truncation" %}
 
 ## StyleGAN features
 SG comes packaged with a lot of interesting features that deserve a post all on their own (coming soon). In simple terms, SG encodes all possible output images in a representation called "Latent Space." This latent space is simply a 512 dimensional space. When inferencing the model, you seed a random number to a script and the script converts that random number to a random point in this 512 dimensional space. This seemingly simple concept has many very cool use cases:
