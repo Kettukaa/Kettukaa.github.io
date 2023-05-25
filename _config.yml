@@ -30,7 +30,7 @@ footer-links:
   pinterest:
   rss:
   twitter: Kettukaa
-  stackoverflow:
+  stackoverflow: Kettukaa
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
   playconsole:
@@ -44,8 +44,8 @@ google_analytics:
 
 # Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
 # Used for Sitemap.xml and your RSS feed
-url: http://Kettukaa.guthub.io
-enforce_ssl: https://Kettukaa.guthub.io
+url: http://blog.luola.dev
+enforce_ssl: https://blog.luola.dev
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
